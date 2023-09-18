@@ -7,8 +7,8 @@ import Image from "next/image";
 import { manufacturers } from "@/constants";
 
 const SearchManufacturer: FC<SearchManufacturerProps> = ({
-  manufacturer,
-  setManufacturer,
+  selected,
+  setSelected,
 }) => {
   const [query, setQuery] = useState("");
 
@@ -24,7 +24,7 @@ const SearchManufacturer: FC<SearchManufacturerProps> = ({
 
   return (
     <div className="search-manufacturer">
-      <Combobox value={manufacturer} onChange={setManufacturer}>
+      <Combobox value={selected} onChange={setSelected}>
         <div className="relative w-full">
           <Combobox.Button className="absolute top-[14px]">
             <Image
